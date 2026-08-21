@@ -1,0 +1,47 @@
+{
+  "dataset_path": "dataset\\dota128",
+  "num_images": 256,
+  "num_labels": 128,
+  "total_annotations": 2059,
+  "class_counts": {
+    "small-vehicle": 467,
+    "large-vehicle": 253,
+    "harbor": 117,
+    "plane": 199,
+    "swimming-pool": 1,
+    "baseball-diamond": 8,
+    "storage-tank": 213,
+    "tennis-court": 19,
+    "ship": 708,
+    "bridge": 46,
+    "soccer-ball-field": 2,
+    "ground-track-field": 8,
+    "roundabout": 14,
+    "helicopter": 4
+  },
+  "tokens_per_line": [
+    9
+  ],
+  "image_size_sample": [
+    [
+      682,
+      682
+    ],
+    [
+      682,
+      682
+    ],
+    [
+      682,
+      682
+    ],
+    [
+      1024,
+      1024
+    ],
+    [
+      682,
+      682
+    ]
+  ]
+}

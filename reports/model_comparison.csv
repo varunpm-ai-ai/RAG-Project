@@ -1,0 +1,6 @@
+Candidate,Model Name,Precision,Recall,mAP@0.5,mAP@0.5:0.95,Size (MB),Inference Speed (ms)
+candidate_1,yolov8n-obb,0.7649,0.2775,0.2665,0.1733,6.09,118.43
+candidate_2,yolov8s-obb,0.4699,0.4322,0.4169,0.2866,22.02,180.45
+candidate_3,yolo11n-obb,0.5865,0.2505,0.256,0.1746,5.35,177.86
+candidate_4,yolo11s-obb,0.6012,0.3145,0.4203,0.258,18.83,139.97
+candidate_5,yolov8m-obb,0.4684,0.4342,0.4186,0.3045,50.69,334.05

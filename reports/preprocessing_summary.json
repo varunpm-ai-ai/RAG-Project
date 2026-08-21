@@ -1,0 +1,21 @@
+{
+  "total_valid": 2059,
+  "total_invalid": 0,
+  "splits": {
+    "train": {
+      "images": 89,
+      "valid_annotations": 1394,
+      "invalid_annotations": 0
+    },
+    "val": {
+      "images": 19,
+      "valid_annotations": 268,
+      "invalid_annotations": 0
+    },
+    "test": {
+      "images": 20,
+      "valid_annotations": 397,
+      "invalid_annotations": 0
+    }
+  }
+}

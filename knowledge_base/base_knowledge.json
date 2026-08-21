@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "title": "DEMO / SYNTHETIC KNOWLEDGE BASE",
+    "version": "1.0",
+    "description": "Synthetic reference knowledge base for 15 standard DOTA object categories created for college RAG project demonstration.",
+    "warning": "This document contains synthetic/dummy information created purely for demonstrating the Retrieval-Augmented Generation (RAG) architecture."
+  },
+  "categories": {
+    "plane": {
+      "title": "Plane Category Profile",
+      "description": "Fixed-wing aircraft including commercial airliners, cargo transports, and military aircraft visible in aerial imagery.",
+      "key_characteristics": "Planes feature distinctive swept wings, a elongated fuselage, horizontal/vertical tail stabilizers, and shadow projections. They are predominantly found on runways, taxiways, aprons, and open tarmac areas at airports or airfields.",
+      "tactical_and_operational_context": "In satellite and aerial intelligence, aircraft count and spatial layout reflect logistical throughput, operational status of airfields, and strategic deployment levels. Fixed-wing aircraft require substantial runway infrastructure compared to rotary-wing aircraft.",
+      "detection_and_resolution_notes": "Planes exhibit high contrast against dark asphalt tarmacs. Key visual challenges include wing reflections, shadow displacement depending on solar elevation angle, and partial occlusion near hangars or maintenance bays."
+    },
+    "ship": {
+      "title": "Ship Category Profile",
+      "description": "Marine vessels ranging from small personal watercraft and fishing boats to large cargo container ships, tankers, and naval destroyers.",
+      "key_characteristics": "Ships exhibit elongated hydro-dynamic hull geometries, distinct bow and stern profiles, and recognizable wake patterns when in motion across water bodies.",
+      "tactical_and_operational_context": "Maritime vessel monitoring is essential for port congestion monitoring, trade route analytics, fisheries surveillance, and coastal security. Vessels in transit leave characteristic hydrodynamic wakes that assist speed estimation.",
+      "detection_and_resolution_notes": "Water surface reflections, wave crests, and sun glint often induce false positives. High-resolution synthetic aperture radar (SAR) or optical imagery allows distinguishing vessel types by hull length and beam width ratios."
+    },
+    "storage-tank": {
+      "title": "Storage Tank Category Profile",
+      "description": "Industrial cylindrical storage structures used for liquid fuel, petroleum products, chemicals, or water storage.",
+      "key_characteristics": "Storage tanks appear as perfect circular structures in orthorectified aerial imagery. Fixed-roof tanks maintain constant circular shadows, whereas floating-roof tanks show varying internal shadows proportional to fill volume.",
+      "tactical_and_operational_context": "Tank farms provide critical indicators for strategic energy reserves, refinery capacity, and industrial chemical manufacturing volume. Shadow analysis inside floating-roof tanks enables volumetric estimate modeling.",
+      "detection_and_resolution_notes": "High circular symmetry makes storage tanks ideal targets for circular Hough transforms and oriented bounding box detectors. Color variations depend on roof coating (white, metallic, or dark primer)."
+    },
+    "baseball-diamond": {
+      "title": "Baseball Diamond Category Profile",
+      "description": "Outdoor sports field layout dedicated to baseball, featuring a distinct diamond infield and semicircular outfield dirt pattern.",
+      "key_characteristics": "Distinguished by a 90-foot diamond dirt infield, pitcher's mound circle, foul lines forming a 90-degree right angle, and grass outfield perimeter.",
+      "tactical_and_operational_context": "Baseball diamonds serve as recreational landmark identifiers in suburban and urban geographic profiling, assisting urban land-use classification and municipal park mapping.",
+      "detection_and_resolution_notes": "Highly recognizable due to high contrast between reddish-brown infield dirt and green turf grass. Scale remains highly standardized across high school, college, and professional facilities."
+    },
+    "tennis-court": {
+      "title": "Tennis Court Category Profile",
+      "description": "Rectangular sports court designed for single or double tennis matches.",
+      "key_characteristics": "Standardized rectangular geometry (78 feet by 36 feet for doubles) with clearly marked white boundary lines, center net line, service boxes, and surrounding apron area.",
+      "tactical_and_operational_context": "Tennis courts appear frequently in clusters near country clubs, resorts, academic institutions, and residential complexes, serving as indicators of recreational facilities.",
+      "detection_and_resolution_notes": "Surfaces vary in color (hard court blue/green, clay red, grass green). Crisp geometric line patterns provide strong features for high-resolution optical edge detection algorithms."
+    },
+    "basketball-court": {
+      "title": "Basketball Court Category Profile",
+      "description": "Rectangular hard-surface playing area for basketball, located outdoors in parks, schools, or community centers.",
+      "key_characteristics": "Rectangular boundary markings, key areas (paint), free-throw circles, three-point arcs, and visible hoop backboard structures at opposing ends.",
+      "tactical_and_operational_context": "Outdoor basketball courts represent key social infrastructure landmarks in municipal zoning and urban community planning assessments.",
+      "detection_and_resolution_notes": "Courts are frequently painted in high-contrast vibrant colors (blue, red, green, grey). Often adjacent to educational facilities or public housing developments."
+    },
+    "ground-track-field": {
+      "title": "Ground Track Field Category Profile",
+      "description": "Large oval running track surrounding an interior grass field used for track and field athletics and soccer/football matches.",
+      "key_characteristics": "Classic 400-meter oval geometry with rounded semicircular ends, multiple parallel lane markings, and an inner field rectangle.",
+      "tactical_and_operational_context": "Ground track fields serve as large geographic orientation anchors in remote sensing images due to their size (approx 180m x 90m overall footprint).",
+      "detection_and_resolution_notes": "Track surfaces typically consist of red, blue, or tan synthetic rubber materials surrounding green turf, creating unmistakable oval color rings in satellite imagery."
+    },
+    "harbor": {
+      "title": "Harbor Category Profile",
+      "description": "Coastal port facility including docks, piers, breakwaters, quays, and mooring slips for vessel docking.",
+      "key_characteristics": "Linear concrete or stone structures extending from land into water bodies, create finger-like piers and protected basins.",
+      "tactical_and_operational_context": "Harbors are strategic transportation hubs facilitating maritime trade, cargo container transfer, and naval operations. Docking capacity correlates directly with port logistics volume.",
+      "detection_and_resolution_notes": "Harbor detection involves complex land-water boundary segmentation and oriented box fitting along narrow pier structures."
+    },
+    "bridge": {
+      "title": "Bridge Category Profile",
+      "description": "Transportation superstructure spanning rivers, bays, valleys, or highway intersections to carry vehicle or rail traffic.",
+      "key_characteristics": "Linear structure elevated over water or lower roadways, flanked by approach ramps, support piers, and casting distinct shadows onto the surface below.",
+      "tactical_and_operational_context": "Bridges represent critical chokepoints in transportation networks. Tracking bridge integrity and traffic density is key for route planning and supply chain analytics.",
+      "detection_and_resolution_notes": "High aspect-ratio rectangular bounding boxes are typical. Shadow patterns cast on water or ground provide strong spatial clues for height and span calculation."
+    },
+    "large-vehicle": {
+      "title": "Large Vehicle Category Profile",
+      "description": "Heavy road vehicles including freight trucks, tractor-trailers, buses, construction haulers, and recreational vehicles.",
+      "key_characteristics": "Rectangular footprint significantly larger than standard passenger cars (typically 8m to 18m length), boxy cabin/trailer contours, and casting rectangular shadows.",
+      "tactical_and_operational_context": "Large vehicle counts on highways, logistics hubs, and industrial yards indicate commercial freight movement and economic activity levels.",
+      "detection_and_resolution_notes": "Orientation is aligned with road lanes or parking bay lines. High spatial resolution (<0.5m/pixel) is essential to distinguish trailers from static container boxes."
+    },
+    "small-vehicle": {
+      "title": "Small Vehicle Category Profile",
+      "description": "Personal motorized passenger vehicles including sedan cars, SUVs, pickup trucks, vans, and minivans.",
+      "key_characteristics": "Compact rectangular geometry (approx 4m to 5m length by 1.8m width), sloped windshield reflections, and subtle shadow lines.",
+      "tactical_and_operational_context": "Small vehicle density indicates urban traffic flow, parking lot occupancy rates, commercial shopping traffic, and commuter patterns.",
+      "detection_and_resolution_notes": "Due to small pixel footprint in aerial images (e.g. 10x20 pixels), small vehicles require high feature map resolution and sub-pixel box regression."
+    },
+    "helicopter": {
+      "title": "Helicopter Category Profile",
+      "description": "Rotary-wing aircraft capable of vertical takeoff and landing, hovering, and low-speed aerial movement.",
+      "key_characteristics": "Central compact fuselage, narrow tail boom, and circular rotor blade disc outline (if blades are spinning or static rotor lines).",
+      "tactical_and_operational_context": "Helicopters are utilized for emergency medical evacuation, law enforcement, offshore transport, and rapid tactical military insertion.",
+      "detection_and_resolution_notes": "Often located on helipads marked with an 'H' or on airfield aprons near fixed-wing aircraft. Lower frequency in generic datasets makes helicopter a rare class."
+    },
+    "roundabout": {
+      "title": "Roundabout Category Profile",
+      "description": "Circular road junction where traffic flows continuously in one direction around a central island.",
+      "key_characteristics": "Circular island (grass, paved, or decorated center) surrounded by a continuous multi-lane ring roadway with radiating entry and exit arms.",
+      "tactical_and_operational_context": "Roundabouts manage traffic flow at major arterial intersections without traffic signals, serving as key urban road topology nodes.",
+      "detection_and_resolution_notes": "Easily identified by central circular geometry and radial road geometry. Radial symmetry assists orientation estimation."
+    },
+    "soccer-ball-field": {
+      "title": "Soccer Ball Field Category Profile",
+      "description": "Rectangular grass or artificial turf field designated for soccer matches.",
+      "key_characteristics": "Rectangular turf layout (100m-110m length by 64m-75m width) with white perimeter touchlines, center line with center circle, penalty box rectangles, and goal posts.",
+      "tactical_and_operational_context": "Soccer fields are prominent municipal and educational athletic facilities, serving as landmark features in urban spatial planning.",
+      "detection_and_resolution_notes": "Green grass color coupled with distinct inner white line box markings provides robust multi-spectral optical signatures."
+    },
+    "swimming-pool": {
+      "title": "Swimming Pool Category Profile",
+      "description": "Water-filled basin structure used for swimming and recreation, located in residential backyards, hotels, or sports complexes.",
+      "key_characteristics": "Rectangular, oval, or kidney-shaped basins filled with clear water, exhibiting bright blue or turquoise cyan hues surrounded by paved coping decks.",
+      "tactical_and_operational_context": "Residential swimming pool counts correlate with property valuation, suburban development density, and local water consumption modeling.",
+      "detection_and_resolution_notes": "Strong spectral signature due to water absorption and blue tile reflections. Small to medium spatial footprint requiring crisp color channel features."
+    }
+  }
+}

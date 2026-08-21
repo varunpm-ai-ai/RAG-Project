@@ -1,0 +1,24 @@
+.venv
+__pycache__  *.pyc  
+dataset
+data
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.svg
+*.ico
+*.bmp
+*.tiff
+*.tif
+*.psd
+*.ai
+*.eps
+*.raw
+images/
+img/
+media/
+assets/images/
+static/images/
+downloads/

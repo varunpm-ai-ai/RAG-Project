@@ -1,0 +1,46 @@
+# Centralized Configuration for DOTA Aerial Image Object Detection Pipeline
+
+dataset:
+  data_yaml: "data/processed/data.yaml"
+  raw_dir: "dataset/dota128"
+  processed_dir: "data/processed"
+
+training:
+  imgsz: 256
+  epochs: 1
+  batch: 8
+  device: "cpu"
+  workers: 0
+  seed: 42
+  project_dir: "runs/detect_obb"
+
+# 5 Practical Candidate Models for OBB Object Detection
+candidates:
+  candidate_1:
+    name: "yolov8n-obb"
+    weights: "yolov8n-obb.pt"
+    description: "YOLOv8 Nano Oriented Bounding Box Model"
+
+  candidate_2:
+    name: "yolov8s-obb"
+    weights: "yolov8s-obb.pt"
+    description: "YOLOv8 Small Oriented Bounding Box Model"
+
+  candidate_3:
+    name: "yolo11n-obb"
+    weights: "yolo11n-obb.pt"
+    description: "YOLO11 Nano Oriented Bounding Box Model"
+
+  candidate_4:
+    name: "yolo11s-obb"
+    weights: "yolo11s-obb.pt"
+    description: "YOLO11 Small Oriented Bounding Box Model"
+
+  candidate_5:
+    name: "yolov8m-obb"
+    weights: "yolov8m-obb.pt"
+    description: "YOLOv8 Medium Oriented Bounding Box Model"
+
+artifacts:
+  best_model_dir: "artifacts/best_model"
+  reports_dir: "reports"
