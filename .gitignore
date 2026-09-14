@@ -1,5 +1,6 @@
 .venv
-__pycache__  *.pyc  
+__pycache__
+*.pyc
 dataset
 data
 *.png
@@ -22,3 +23,12 @@ media/
 assets/images/
 static/images/
 downloads/
+
+# Environment and Secret Files
+.env
+.env.*
+!.env.example
+dotenv
+*.env
+*.pem
+*.key

@@ -54,28 +54,35 @@
 
 ---
 
-## Phase 2 Features (Streamlit + RAG App)
+## Phase 2 Status: COMPLETE & INTEGRATED
+- Previous Phase 1 & 2 DOTA Object Detection & RAG pipeline completed.
+
+---
+
+## Round 2 Scope: Multimodal Conversational AI Assistant
+- **Status**: **COMPLETE & ACTIVE**
 - **Application File**: [app.py](file:///C:/Machine%20Learning/RAG%20Project/app.py)
-- **Workflow A (Vision)**: Aerial Image upload -> Run Object Detection -> Render Bounding Boxes / Confidence Cards -> Category Selection.
-- **Workflow B (Knowledge Upload & Management)**: Sidebar document uploader (JSON, TXT, PDF, MD) -> Select DOTA Category -> Vector Store Indexing.
-- **Category-Filtered RAG Retrieval**: [pipeline.py](file:///C:/Machine%20Learning/RAG%20Project/src/rag/pipeline.py), [vector_store.py](file:///C:/Machine%20Learning/RAG%20Project/src/rag/vector_store.py), [embeddings.py](file:///C:/Machine%20Learning/RAG%20Project/src/rag/embeddings.py), [llm.py](file:///C:/Machine%20Learning/RAG%20Project/src/rag/llm.py).
-- **Interactive QA Chat**: Query selected category -> RAG synthesis -> Expandable source & text chunk details.
+- **AI Service**: [gemini_service.py](file:///C:/Machine%20Learning/RAG%20Project/src/ai/gemini_service.py)
+- **Config & Key Loader**: [config.py](file:///C:/Machine%20Learning/RAG%20Project/src/utils/config.py)
+- **Model**: `gemini-2.0-flash` / `gemini-1.5-flash` (Free-tier compliant multimodal model)
+- **Key Features**:
+  - Image Upload & Visual Chat (PNG, JPG, JPEG, WEBP)
+  - Interactive multi-turn natural language conversation with streaming responses
+  - ➕ New Chat session reset button
+  - Persona selection (General Assistant, Visual Specialist, Technical Expert, Detailed Analyst)
+  - Onboarding prompt chips & sidebar image controls
 
 ---
 
 ## How to Run the System
 
-1. **Run Training Pipeline (Phase 1)**:
+1. **Launch Round 2 Streamlit Multimodal AI Application**:
    ```bash
-   .\.venv\Scripts\python.exe train.py
+   .\.venv\Scripts\python.exe -m streamlit run app.py
    ```
 
-2. **Run CLI Inference Test**:
+2. **Run CLI Inference Test (Round 1 Model)**:
    ```bash
    .\.venv\Scripts\python.exe inference.py --image dataset/dota128/images/train/P0008__682__461___553.jpg --conf 0.15
    ```
 
-3. **Launch Streamlit Web Application (Phase 2)**:
-   ```bash
-   .\.venv\Scripts\python.exe -m streamlit run app.py
-   ```
